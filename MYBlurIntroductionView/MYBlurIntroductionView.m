@@ -186,6 +186,9 @@
 }
 
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    
+    self.alpha = 1.0;
+    
     if (self.LanguageDirection == MYLanguageDirectionLeftToRight) {
         self.CurrentPanelIndex = scrollView.contentOffset.x/self.MasterScrollView.frame.size.width;
         
